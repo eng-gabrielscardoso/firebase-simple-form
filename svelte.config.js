@@ -16,6 +16,7 @@ const config = {
 			'@stores': './src/lib/stores',
 			'@templates': './src/lib/templates',
 			'@utils': './src/lib/utils',
+			'@config': './src/config',
 			'@services': './src/services',
 			'@types': './src/types',
 			'@styles': './src/styles'
