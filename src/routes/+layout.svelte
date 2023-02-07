@@ -1,8 +1,8 @@
 <script lang="ts">
-	import '../app.css';
+	import '@src/app.css';
 </script>
-
-<svelte:head>
-	<title>Firebase Simple Form</title>
-</svelte:head>
-<h1 class="text-3xl font-bold text-blue-600 underline">Hello world</h1>
+<main>
+	<div class="bg-[url('/images/signInBannerImage.webp')] bg-cover bg-center bg-nore min-h-screen">
+		<slot />
+	</div>
+</main>
