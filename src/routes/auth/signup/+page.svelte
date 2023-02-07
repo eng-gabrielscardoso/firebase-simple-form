@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Card from '@components/base/Card.svelte';
-	import { api } from '@src/services/api';
+	import { db } from '@src/services/firebase';
+	import { setRecipients } from '@src/services/recipients/recipients';
 
 	let userName = '';
 	let jobPosition = '';
@@ -20,7 +21,7 @@
 		};
 
 		try {
-			const request = await api.post('/recipients', payload);
+			const request = await setRecipients(db, payload);
 		} catch (error) {
 			console.error(error);
 		} finally {

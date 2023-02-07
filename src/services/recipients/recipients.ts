@@ -1,8 +1,12 @@
-import { collection, Firestore, getDocs } from 'firebase/firestore/lite';
+import { collection, Firestore, getDocs, addDoc } from 'firebase/firestore/lite';
 
 export async function getRecipients(db: Firestore) {
 	const recipientsCol = collection(db, 'recipients');
 	const recipientsSnapshot = await getDocs(recipientsCol);
 	const recipientsList = recipientsSnapshot.docs.map((doc) => doc.data());
 	return recipientsList;
+}
+
+export async function setRecipients(db: Firestore, payload: unknown) {
+	await addDoc(collection(db, 'recipients'), payload);
 }
