@@ -17,6 +17,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Dashboard</title>
+</svelte:head>
+
 <main>
 	<div class="flex flex-col bg-slate-300 h-screen p-16">
 		<header>

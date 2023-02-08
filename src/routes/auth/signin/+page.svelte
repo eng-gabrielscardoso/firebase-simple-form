@@ -37,7 +37,7 @@
 <div class="h-screen w-screen flex justify-center items-center p-4">
 	<Card class="w-full md:w-1/3 text-center" title="Sign In">
 		<div class="flex flex-col gap-4">
-			<form class="w-full flex flex-col gap-4" on:submit={login}>
+			<form class="w-full flex flex-col gap-4" on:submit|preventDefault={login}>
 				<p>Please inform your credentials to log in your account.</p>
 				<input
 					type="email"
