@@ -7,6 +7,6 @@ export async function getRecipients(db: Firestore) {
 	return recipientsList;
 }
 
-export async function setRecipients(db: Firestore, payload: unknown) {
+export async function createRecipient(db: Firestore, payload: unknown) {
 	await addDoc(collection(db, 'recipients'), payload);
 }
